@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Your Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .order-confirmation {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Your Store</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" id="cart-link">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="checkout">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <h3>Shipping Information</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit" class="btn-primary">Place Order</button>
+        </form>
+    </section>
+
+    <section class="order-confirmation" id="order-confirmation">
+        <h2>Order Confirmation</h2>
+        <div class="confirmation-message">
+            <p>Your order has been successfully placed!</p>
+            <p>Thank you for shopping with us. You will receive an email confirmation shortly.</p>
+            <a href="index.html" class="btn-primary">Return to Home</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.querySelector('.checkout').style.display = 'none'; // Hide the checkout form
+            document.getElementById('order-confirmation').style.display = 'block'; // Show the order confirmation
+        });
+    </script>
+</body>
+</html>

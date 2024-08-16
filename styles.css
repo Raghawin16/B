@@ -1,0 +1,534 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:linear-gradient(135deg,#153677,#4e085f, #4487ae,#1ebd6e , #6f60ff );
+    padding: 10px 0;
+    color: white;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.nav-links a:hover {
+    background:linear-gradient(135deg,#0850e1,#c73325, #3030a2);
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
+/* Main Styles */
+main {
+    padding: 80px 20px; /* Adjust top padding to account for fixed header */
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('https://media.istockphoto.com/id/1409301168/photo/cricket-ball-and-bat-against-wall.jpg?s=2048x2048&w=is&k=20&c=oVZkAe5BbwDkddnHNqldhK-jbrIK5Wh-hcfPChPebHM=') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 140px 20px 80px; /* Adjust top padding for larger image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Images */
+/* Hero Images */
+.hero-images {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 280px; /* Increased height for larger images */
+    position: relative;
+    padding: 20px; /* Added padding around the image */
+    border-radius: 15px; /* Added border-radius for curved edges */
+}
+
+.hero-images img {
+    width: 70%; /* Adjust width to allow space between images */
+    height: 80%; /* Adjust height to fit within the container */
+    object-fit: cover;
+    /* Space between images */
+    transition: transform 0.5s ease-in-out;
+    border-radius: 45px;
+    padding: 20px; 
+}
+
+/* Remove margin on the last image to avoid extra space at the end */
+.hero-images img:last-child {
+    margin-right: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    margin-top: 20px; /* Space between hero images and content */
+}
+
+.hero-content h1, .hero-content p {
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3.2em; /* Adjusted font size for larger heading */
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.4em; /* Adjusted font size for larger paragraph text */
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Space above the button */
+}
+
+.btn-primary:hover {
+    background-color: #e05549;
+}
+
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color:whitesmoke;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: blue;
+}
+
+.hero-content h1, .hero-content p {
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3.2em; /* Adjusted font size for larger heading */
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.4em; /* Adjusted font size for larger paragraph text */
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e05549;
+}
+
+/* Featured Products */
+/* Main Content Sections */
+.featured-products, .shop, .cart, .product-detail, .contact, .checkout, .order-confirmation {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5px; /* Ensure content does not hide under fixed header */
+}
+
+/* Section Titles */
+.featured-products h2, .shop h2, .cart h2, .product-detail h2, .contact h2, .checkout h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px; /* Reduced from 20px to 10px */
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px; /* Increased gap between cards */
+}
+
+/* Individual Product Card */
+.product {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px; /* Added margin for space below each card */
+}
+
+/* Product Image */
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* Product Name and Description */
+.product h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Product Detail Section */
+.product-detail {
+    display: flex;
+    align-items:center;
+    gap: 40px;
+}
+
+.product-detail .product-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-detail .product-info {
+    flex: 1;
+    
+}
+
+.product-detail .product-info h2 {
+    font-size: 2em;
+  
+    text-align:left;
+    
+}
+
+.cart-items {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Add this to your styles.css */
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cart h2 {
+    text-align: center;
+    margin-bottom: 30px; 
+    margin-top: 50px;/* Increased from 20px to 30px */
+}
+
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between cart items */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-quantity {
+    margin-top: 10px;
+}
+
+.cart-item-quantity label {
+    display: block;
+}
+/* Add this to your styles.css */
+.cart-item-quantity input {
+    width: 80px; /* Adjust this value as needed */
+    padding: 5px;
+    font-size: 0.9em; /* Adjust the font size to fit better */
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cart-summary p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #e05549;
+}
+
+.contact form, .checkout form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact label, .checkout label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea, .checkout input, .checkout select {
+    width: calc(100% - 20px); /* Adjust the width to account for margin */
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px; /* Add space on the right */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.contact button, .checkout button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.contact button:hover, .checkout button:hover {
+    background-color: #e05549;
+}
+
+.btn-secondary {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background:linear-gradient(135deg,#153677,#4e085f, #4487ae,#1ebd6e , #6f60ff );
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}
+
+.order-confirmation .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.order-confirmation .btn-primary:hover {
+    background-color: #e05549;
+}
+
+/* Responsive Styles */
+
+/* For screens larger than 1200px (TV) */
+@media (min-width: 1200px) {
+    .navbar {
+        flex-direction: row;
+    }
+
+    .nav-links {
+        flex-direction: row;
+    }
+
+    .hero {
+        padding: 160px 20px 100px;
+    }
+}
+
+/* For screens between 768px and 1199px (Laptop & Desktop) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .hero-content h1 {
+        font-size: 2.7em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+}
+
+/* For screens between 481px and 767px (Tablet) */
+@media (max-width: 767px) and (min-width: 481px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+}
+
+/* For screens up to 480px (Mobile) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 3px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+    .product h3 {
+        font-size: 0.7em;
+        margin-bottom: 10px;
+    }
+    
+    .product p {
+        font-size: 0.6em;
+        margin-bottom: 20px;
+    }
+    
+    /* Product Detail Section */
+    .product-detail {
+        display: flex;
+        align-items:first baseline;
+        gap: 40px;
+    }
+    
+    .product-detail .product-image img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 80px;
+        align-items:center;
+    }
+    
+    .product-detail .product-info {
+        flex: 1;
+        
+    }
+    
+    .product-detail .product-info h2 {
+        font-size: 1em;
+      
+        text-align:left;
+        
+    }
+}
+

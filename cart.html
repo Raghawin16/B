@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Your Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">App Store</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" id="cart-link">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <div class="cart-items">
+            <!-- First Cart Item -->
+            <div class="cart-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcOLbr3yfoDFbGs7oj184B9bwAmiEtgsGYOQ&s" alt="Product 1">
+                <div class="cart-item-info">
+                    <h3>Spartan Bat</h3>
+                    <p>$19.99</p>
+                    <div class="cart-item-quantity">
+                        <label for="quantity1">Quantity:</label>
+                        <input type="number" id="quantity1" name="quantity" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Cart Item -->
+            <div class="cart-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc3Yh0RhpVH2rvT3oDQqz148pUUiOr9yEEDw&s" alt="Product 2">
+                <div class="cart-item-info">
+                    <h3>SS 100 Bat</h3>
+                    <p>$29.99</p>
+                    <div class="cart-item-quantity">
+                        <label for="quantity2">Quantity:</label>
+                        <input type="number" id="quantity2" name="quantity" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cart items as needed -->
+             
+        </div>
+        <div class="cart-summary">
+            <p>Total: $49.98</p>
+            <a href="checkout.html" class="btn-primary">Proceed to Checkout</a>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Your Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
